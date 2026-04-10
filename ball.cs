@@ -55,15 +55,7 @@ public class ball : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic;
         line.enabled = true;
     }
-
-    IEnumerator Release()
-    {
-        yield return new WaitForSeconds(releasetime);
-
-        GetComponent<SpringJoint2D>().enabled = false;
-    }
-    //StartCoroutine(Release());
-
+        
     private void OnMouseUp()
     {
         isPressed = false;
