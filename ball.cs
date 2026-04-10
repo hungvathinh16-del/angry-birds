@@ -97,7 +97,6 @@ public class ball : MonoBehaviour
         {
             v0 = v0.normalized * maxShoot;
         }
-        points.Capacity = 30;
         points.Clear();
         points.Add(pos);
         while(true)
@@ -105,7 +104,7 @@ public class ball : MonoBehaviour
             pos = getNextPosition(pos, v0);
             pos.z = -1;//cái linerenderer bên em nếu ở z=0 thì không hiện
             points.Add(pos);
-            if(points.Count >= 30 || !isPressed)
+            if(points.Count >= 100 || !isPressed)
             {
                 break;
             }
