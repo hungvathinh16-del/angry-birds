@@ -108,7 +108,7 @@ public class ball : MonoBehaviour
             {
                 break;
             }
-            //v = v0 x t x 1/2a (gravityScale = 1.5)
+            //v = v0  + 1/2at (gravityScale = 1.5)
             v0 += Physics2D.gravity * rb.gravityScale * 0.02f; 
         }
         line.positionCount = points.Count;
